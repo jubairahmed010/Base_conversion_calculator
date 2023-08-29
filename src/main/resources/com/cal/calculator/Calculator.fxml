@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cal.calculator.CalculatorController">
+    <TextField fx:id="inputField" layoutY="-22.0" prefHeight="78.0" prefWidth="600.0" AnchorPane.bottomAnchor="322.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+    <Label fx:id="outputLabel" layoutY="79.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="600.0" stylesheets="@styles.css" AnchorPane.bottomAnchor="222.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="78.0" />
+    <GridPane hgap="2.0" layoutY="178.0" prefHeight="222.0" prefWidth="600.0" vgap="2.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+        <Button mnemonicParsing="false" onAction="#convertToBinary" prefHeight="81.0" prefWidth="300.0" text="B">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#convertToHexadecimal" prefHeight="84.0" prefWidth="300.0" text="H" GridPane.columnIndex="1">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#convertToOctal" prefHeight="77.0" prefWidth="300.0" text="O" GridPane.rowIndex="1">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#gotoNextPage" prefHeight="77.0" prefWidth="300.0" text="Next Screen" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#exitActionHandler" prefHeight="118.0" prefWidth="300.0" text="Exit" GridPane.rowIndex="2">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#clear" prefHeight="99.0" prefWidth="300.0" text="Clear" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+    </GridPane>
+</AnchorPane>
